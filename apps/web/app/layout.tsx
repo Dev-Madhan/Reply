@@ -1,12 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google"
-import dynamic from "next/dynamic"
-
 import "@workspace/ui/globals.css"
+import ClientProviders from "@/components/client-providers";
 
-const Providers = dynamic(
-  () => import("@/components/providers").then(m => m.Providers),
-  { ssr: false }
-)
 
 const fontSans = Geist({
   subsets: ["latin"],
@@ -25,8 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased`}>
-        <Providers>{children}</Providers>
+      <body
+        className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased`}
+      >
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   )
