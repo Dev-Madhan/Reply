@@ -1,13 +1,14 @@
 import React from 'react'
 import {AuthGaurd} from "@/modules/auth/ui/components/auth-gaurd";
-import {OrganizationGaurd} from "@/modules/auth/ui/components/organization-gaurd";
+import {OrganizationGuard} from "@/modules/auth/ui/components/organization-guard";
+
 
 const Layout = ({children}: {children : React.ReactNode;}) => {
     return (
         <AuthGaurd>
-            <OrganizationGaurd>
+            <OrganizationGuard>
                 {children}
-            </OrganizationGaurd>
+            </OrganizationGuard>
         </AuthGaurd>
     )
 }
