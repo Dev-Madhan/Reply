@@ -26,6 +26,10 @@
       "core-js-pure",
       "esbuild",
       "sharp"
+    ],
+    "onlyBuiltDependencies": [
+      "@clerk/shared",
+      "@sentry/cli"
     ]
   }
 }
