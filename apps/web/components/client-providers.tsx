@@ -1,7 +1,8 @@
 "use client"
 
 import { ReactNode } from "react"
-import { Providers } from "@/components/providers"
+import {Providers} from "./providers";
+
 
 export default function ClientProviders({
   children,
