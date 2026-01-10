@@ -30,6 +30,9 @@
     "onlyBuiltDependencies": [
       "@clerk/shared",
       "@sentry/cli"
-    ]
+    ],
+    "overrides": {
+      "csstype": "3.2.3"
+    }
   }
 }
