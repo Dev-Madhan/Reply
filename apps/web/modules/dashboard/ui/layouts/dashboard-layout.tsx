@@ -1,8 +1,10 @@
-import {AuthGaurd} from "@/modules/auth/ui/components/auth-gaurd";
-import {OrganizationGuard} from "@/modules/auth/ui/components/organization-guard";
+
 import {SidebarProvider} from "@workspace/ui/components/sidebar";
 import { cookies } from "next/headers";
-import {DashboardSidebar} from "@/modules/dashboard/ui/components/dashboard-sidebar";
+import {AuthGaurd} from "../../../auth/ui/components/auth-gaurd";
+import {OrganizationGuard} from "../../../auth/ui/components/organization-guard";
+import {DashboardSidebar} from "../components/dashboard-sidebar";
+
 
 
 export const DashboardLayout = async ({children}: { children: React.ReactNode }) => {
