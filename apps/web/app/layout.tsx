@@ -1,25 +1,25 @@
-import { Geist, Geist_Mono } from "next/font/google"
+import { Inter, Bebas_Neue } from "next/font/google"
 import "@workspace/ui/globals.css"
-import {ClerkProvider} from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs"
+import { Metadata } from "next"
+import { Providers } from "../components/providers"
 
-import {Metadata} from "next";
-import {Providers} from "../components/providers";
-
-
-const fontSans = Geist({
+const fontSans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
+  weight: ["400", "500", "600", "700"],
 })
 
-const fontMono = Geist_Mono({
+const fontDisplay = Bebas_Neue({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-display",
+  weight: ["400"],
 })
 
 export const metadata: Metadata = {
   title: "Reply",
   description: "A smart customer support platform designed to resolve faster.",
-};
+}
 
 export default function RootLayout({
   children,
@@ -29,12 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased`}
+        className={`${fontSans.variable} ${fontDisplay.variable} font-sans antialiased`}
       >
         <ClerkProvider>
-            <Providers>
-                {children}
-            </Providers>
+          <Providers>
+            {children}
+          </Providers>
         </ClerkProvider>
       </body>
     </html>
