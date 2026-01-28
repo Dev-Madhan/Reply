@@ -30,4 +30,3 @@ export const WidgetView = ({ organizationId }: Props) => {
     )
 }
 
-// http://localhost:3001/?organizationId=123
