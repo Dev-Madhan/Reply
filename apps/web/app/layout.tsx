@@ -3,6 +3,7 @@ import "@workspace/ui/globals.css"
 import { ClerkProvider } from "@clerk/nextjs"
 import { Metadata } from "next"
 import { Providers } from "../components/providers"
+import React from "react";
 
 const fontSans = Inter({
   subsets: ["latin"],

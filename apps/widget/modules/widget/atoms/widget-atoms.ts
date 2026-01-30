@@ -8,7 +8,7 @@ export const screenAtom = atom<WidgetScreen>("loading")
 export const organizationIdAtom = atom<string | null>(null);
 export const errorMessagesAtom = atom<string | null>(null);
 export const loadingMessagesAtom = atom<string | null>(null);
-// Organization-scoped contact session atom
 export const contactSessionIdAtomFamily = atomFamily((organizationId: string) => {
     return atomWithStorage<Id<"contactSessions"> | null>(`${CONTACT_SESSION_KEY}_${organizationId}`, null)
 });
+export const conversationIdAtom = atom<Id<"conversations"> | null>(null);
